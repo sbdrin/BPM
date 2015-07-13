@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{518D7C69-D9D2-45F1-AE24-4C8FF7EA3E58}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.GAIA.BPM.UI</RootNamespace>
+    <AssemblyName>BenQGuru.GAIA.BPM.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.GAIA.Core">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.DataTransfer.DataTransfer">
+      <HintPath>..\..\Reference\DataTransfer\BenQGuru.GAIA.DataTransfer.DataTransfer.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.IRepository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.IRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.UI">
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.eOA.WebApi">
+      <HintPath>..\..\Reference\EOA\BenQGuru.GAIA.eOA.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Infrastructure.EMay">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Infrastructure.EMay.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Infrastructure.EnterpriseLibrary">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Infrastructure.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Infrastructure.JanshEtOtp">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Infrastructure.JanshEtOtp.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Infrastructure.MemcachedAdapter">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Infrastructure.MemcachedAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.IRepository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.IRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.UI">
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.Web">
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Kernel.WebApi">
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Kernel.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.MvcFoundation, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\BenQGuru.GAIA.MvcFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Passport.Web">
+      <HintPath>..\..\Reference\Kernel\BenQGuru.GAIA.Passport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Repository">
+      <HintPath>..\..\Reference\BenQGuru.GAIA.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.GAIA.Service.SwfGenerate.Client">
+      <HintPath>..\..\Reference\swfCreater\BenQGuru.GAIA.Service.SwfGenerate.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\..\Reference\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\..\Reference\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\..\Reference\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Reference\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\Reference\Microsoft.AspNet.Web.Optimization.1.1.0-alpha1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Reference\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\Reference\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bpm.css" />
+    <Content Include="Content\bpm.form.css" />
+    <Content Include="Content\drawFlow.css" />
+    <Content Include="Content\GraphicalApproveList.css" />
+    <Content Include="Content\images\arrow_gray.png" />
+    <Content Include="Content\images\arrow_green.png" />
+    <Content Include="Content\images\bpm\bpm.png" />
+    <Content Include="Content\images\bpm\drawFlow\approverule.gif" />
+    <Content Include="Content\images\bpm\drawFlow\approve_big.gif" />
+    <Content Include="Content\images\bpm\drawFlow\approve_small.gif" />
+    <Content Include="Content\images\bpm\drawFlow\arrow.gif" />
+    <Content Include="Content\images\bpm\drawFlow\arrow_red.gif" />
+    <Content Include="Content\images\bpm\drawFlow\autopass_big.gif" />
+    <Content Include="Content\images\bpm\drawFlow\autopass_small.gif" />
+    <Content Include="Content\images\bpm\drawFlow\icon_end.gif" />
+    <Content Include="Content\images\bpm\drawFlow\icon_start.gif" />
+    <Content Include="Content\images\bpm\drawFlow\manualapprove_big.gif" />
+    <Content Include="Content\images\bpm\drawFlow\manualapprove_small.gif" />
+    <Content Include="Content\images\bpm\drawFlow\process_big.gif" />
+    <Content Include="Content\images\bpm\drawFlow\process_small.gif" />
+    <Content Include="Content\images\bpm\drawFlow\Subflow_D.gif" />
+    <Content Include="Content\images\bpm\drawFlow\tool_title_bg.gif" />
+    <Content Include="Content\images\bpm\formheader.gif" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\ApproveList\bg.approveListList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\DeptApproveList\bg.deptApproveListView.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormPhase\bg.flowDiagram.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\PluralismApprover\bg.bpm.PluralismApprover.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\ApproverLevel\bg.bpm.ApproverList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\DefaultApproveComment\bg.bpm.DefaultApproveCommentList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\DeptApproveList\bg.deptApproveListList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\Level\bg.bpm.LevelList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\PersonalInfo\bg.bpm.amFlowSetting.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\PersonalInfo\bg.bpm.amInternalSetting.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\SignedDrawing\bg.bpm.upload.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\SignedDrawing\bg.bpm.amSignedDrawingList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\FinClass\bg.bpm.amFinClassList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\GrantedApprover\bg.bpm.amGrantedApproverList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\GrantedEmployeeLevel\bg.bpm.grantedEmployeeLevel.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormWorklist\bg.bpm.formWorklist.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\CalendarElement\bg.bpm.CalendarElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\ComputeTextBoxElement\bg.bpm.fmDesignComputeTextBox.js" />
+    <Content Include="Scripts\BPM\Admin\ExtendType\bg.bpm.extendType.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormBuild\bg.bpm.formBuildList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\PageLogic\bg.bpm.pageLogicList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormHistory\bg.bpm.formHistoryList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\SetApplicant\bg.bpm.setApplicantList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\DropdownListElement\bg.bpm.DropdownListElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\EmailElement\bg.bpm.fmDesignEmailElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\ExternalDataSource\bg.bpm.dbDataSourceList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\ExternalDataSource\bg.bpm.wsDataSourceList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormLayout\bg.bpm.formLayout.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormLayout\bg.bpm.formLayoutModify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\ApplyPermission\bg.bpm.ApplyPermission.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormConfigSP\bg.bpm.formActionConfigList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\CodeList\bg.bpm.CodeList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormAction\bg.bpm.fmFormActionList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormDealer\bg.bpm.fmFormDealerList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormDescription\bg.bpm.formHelpLink.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormField\bg.bpm.fmFormFieldList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormList\bg.bpm.formListPicker.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormMaintain\bg.bpm.fmFormMaintainList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormPhase\bg.bpm.formPhaseCondition.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormProperty\bg.bpm.fmFormProperty.add.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormProperty\bg.bpm.fmFormProperty.modify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflowMapping\bg.bpm.fmFormSubflowMappingAdd.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflowMapping\bg.bpm.fmFormSubflowMappingList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflowMapping\bg.bpm.fmFormSubflowMappingModify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflow\bg.bpm.fmFormSubflowAdd.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflow\bg.bpm.fmFormSubflowList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormSubflow\bg.bpm.fmFormSubflowModify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.dataSource.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.role.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.webService.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\PhaseAdvance\bg.bpm.setting.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\PhaseCondition\bg.bpm.phaseCondition.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\ReturnConfig\bg.bpm.fmReturnConfig.js" />
+    <Content Include="Scripts\BPM\Admin\Employee\bg.bpm.employeePopupPicker.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormFunction\bg.bpm.formFunctionList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormType\bg.bpm.formtype.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormDescription\bg.bpm.formDescription.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormConfig\bg.bpm.fmFormConfig.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\GrantedAmount\bg.bpm.grantAmount.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\RoleType\bg.bpm.amRoleTypeList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\RoleType\bg.bpm.amRoleTypeModify.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\Role\bg.bpm.amRoleAdd.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\Role\bg.bpm.amRoleList.js" />
+    <Content Include="Scripts\BPM\Admin\ApproveModel\Role\bg.bpm.amRoleModify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormList\bg.bpm.formList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.person.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.personLevel.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.deptLevel.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.amount.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormPhase\bg.bpm.formPhaseList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\SameApprover\bg.bpm.fmSameApproverList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormNoticeConfig\bg.bpm.formNoticeConfig.js" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\FormNoticeConfig\bg.bpm.formNoticeConfigModify.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\DataSource\bg.bpm.dataSource.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\EmployeePicker\bg.bpm.EmployeePicker.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormTable\bg.bpm.formTable.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\FormTable\bg.bpm.formTable.modifyInline.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\GeneralPickerElement\bg.bpm.GeneralPickerElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\LabelElement\bg.bpm.LabelElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\NumberTextBoxElement\bg.bpm.fmDesignNumber.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\PageField\bg.bpm.pageField.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\LinkElement\bg.bpm.LinkElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\LongTextboxElement\bg.bpm.fmDesignLongTextbox.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\SqlSetting\bg.bpm.sqlSetting.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\RelatedFormElement\bg.bpm.RelatedFormElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\SeparatorElement\bg.bpm.SeparatorElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\SumTextBoxElement\bg.bpm.fmDesignSumTextBox.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\TableElement\bg.bpm.TableElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\TelephoneElement\bg.bpm.fmDesignTelephoneElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\TextboxElement\bg.bpm.fmDesignTextbox.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\UpLoadElement\bg.bpm.UpLoadElement.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\DesignType\bg.bpm.fmDesignTypeList.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\RadioButtonElement\bg.bpm.fmDesignRadioButton.js" />
+    <Content Include="Scripts\BPM\Admin\FormDesign\CheckBoxListElement\bg.bpm.fmDesignCheckBox.js" />
+    <Content Include="Scripts\BPM\Admin\Org\bg.bpm.orgPopupPicker.js" />
+    <Content Include="Scripts\BPM\ApplyForm\bg.bpm.applyFormList.js" />
+    <Content Include="Scripts\BPM\ApproveList\bg.bpm.approveList.js" />
+    <Content Include="Scripts\BPM\ApproveList\bg.bpm.approveListSuggest.js" />
+    <Content Include="Scripts\BPM\bg.bpm.fmAgent.js" />
+    <Content Include="Scripts\BPM\GraphicalApproveList\bg.bpm.graphicalApproveList.js" />
+    <Content Include="Scripts\BPM\GridDemo\bg.bpm.gridDemoOne.js" />
+    <Content Include="Scripts\BPM\Module\AddApproverByApplicant\bg.bpm.addApproverByApplicant.js" />
+    <Content Include="Scripts\BPM\Module\AddApprover\bg.bpm.addApprover.js" />
+    <Content Include="Scripts\BPM\Module\CCForm\bg.bpm.ccForm.js" />
+    <Content Include="Scripts\BPM\Module\HurryApproving\bg.bpm.hurryForm.js" />
+    <Content Include="Scripts\BPM\Module\ReturnForm\bg.bpm.returnForm.js" />
+    <Content Include="Scripts\BPM\Module\Test\bg.bpm.test.js" />
+    <Content Include="Scripts\BPM\Module\TransferApproving\bg.bpm.transferApproving.js" />
+    <Content Include="Scripts\BPM\Approve\bg.bpm.approve.js" />
+    <Content Include="Scripts\BPM\QueryAgentedByMe\bg.bpm.queryAgentedByMe.js" />
+    <Content Include="Scripts\BPM\ToolBarMenu\bg.bpm.toolbar.js" />
+    <Content Include="Scripts\BPM\ToolBarMenu\bg.bpm.actionCommon.js" />
+    <Content Include="Scripts\BPM\TopMenu\bg.bpm.topMenu.js" />
+    <Content Include="Scripts\BPM\Trace\bg.bpm.traceApprove.js" />
+    <Content Include="Scripts\BPM\Trace\bg.bpm.traceCommon.js" />
+    <Content Include="Scripts\BPM\Trace\TraceApply\bg.bpm.traceApply.js" />
+    <Content Include="Scripts\BPM\Trace\bg.bpm.TraceCopyTo.js" />
+    <Content Include="Template\UIImport.html" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormHistory\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormLayout\_subTabLine.cshtml" />
+    <Content Include="Views\BPM\Admin\ExtendType\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\ApproveList\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\PluralismApprover\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\ApproverLevel\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\DefaultApproveComment\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\DeptApproveList\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\Level\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\PersonalInfo\FlowSetting.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\PersonalInfo\IntertionalSetting.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\PersonalInfo\_LayOutPersonInfo.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\SignedDrawing\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormDealer\_subTabLine.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormPhase\FlowDiagram.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\DeptApproveList\Detail.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormWorklist\List.cshtml" />
+    <Content Include="Log.config" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormBuild\List.cshtml" />
+    <None Include="Views\BPM\Admin\FormDesign\SetApplicant\List.cshtml" />
+    <Content Include="Views\BPM\Forms\bg.bpm.forms.plugin.js" />
+    <Content Include="Web.config" />
+    <Content Include="XSL\ApproveModelMenu.xsl" />
+    <Content Include="XSL\CopyFlowConfig.xml" />
+    <Content Include="XSL\FlowERRoute.xml" />
+    <Content Include="XSL\FormDefineMenu.xsl" />
+    <Content Include="XSL\FormDesignMenu.xsl" />
+    <Content Include="XSL\IntegratedCenterMenu.xsl" />
+    <Content Include="XSL\MainMenu.xsl" />
+    <Content Include="XSL\ParticipantMenu.xsl" />
+    <Content Include="XSL\SystemConfigMenu.xsl" />
+    <Content Include="XSL\SystemManageMenu.xsl" />
+    <Content Include="XSL\SystemPortalMenu.xsl" />
+    <Content Include="XSL\SystemReportMenu.xsl" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\NumberTextBoxElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\EmailElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\TelephoneElement\List.cshtml" />
+    <EmbeddedResource Include="XSL\Template\DALTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DALTemplate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Views\BPM\Forms\_LayoutForms.cshtml" />
+    <Content Include="Views\BPM\Forms\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Forms\Web.config" />
+    <Content Include="Views\BPM\Module\AddApprover\List.cshtml" />
+    <Content Include="Views\BPM\ApplyForm\List.cshtml" />
+    <Content Include="Views\BPM\Module\AddApproverByApplicant\List.cshtml" />
+    <Content Include="Views\BPM\Module\CCForm\List.cshtml" />
+    <Content Include="Views\BPM\Module\HurryApproving\List.cshtml" />
+    <Content Include="Views\BPM\Module\ReturnForm\List.cshtml" />
+    <Content Include="Views\BPM\Module\TransferApproving\List.cshtml" />
+    <Content Include="Views\BPM\ApproveList\List.cshtml" />
+    <Content Include="Views\BPM\CommPicker\_UserCard.cshtml" />
+    <Content Include="Views\BPM\Approve\List.cshtml" />
+    <Content Include="Views\BPM\QueryAgentedByMe\List.cshtml" />
+    <Content Include="Views\BPM\Module\Test\List.cshtml" />
+    <Content Include="Views\BPM\ApproveList\_List.cshtml" />
+    <Content Include="Views\BPM\TraceApply\List.cshtml" />
+    <Content Include="Views\BPM\TraceApply\_QueryPartail.cshtml" />
+    <Content Include="Views\BPM\GraphicalApproveList\List.cshtml" />
+    <Content Include="Views\BPM\TraceApprove\Approve.cshtml" />
+    <Content Include="Views\BPM\TraceApprove\_GridPartail.cshtml" />
+    <Content Include="Views\BPM\TraceCopyTo\List.cshtml" />
+    <Content Include="Views\BPM\ToolBarMenu\List.cshtml" />
+    <Content Include="Views\BPM\TopMenu\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\Person.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BenQGuru.GAIA.BPM.ActionInterface\BenQGuru.GAIA.BPM.ActionInterface.csproj">
+      <Project>{FFA32515-0AA1-4BFB-9A33-1B5BE378D890}</Project>
+      <Name>BenQGuru.GAIA.BPM.ActionInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenQGuru.GAIA.BPM.DevelopmentHelp\BenQGuru.GAIA.BPM.DevelopmentHelp.csproj">
+      <Project>{F99EBDDA-A96E-4838-B9AD-D396F4253A5B}</Project>
+      <Name>BenQGuru.GAIA.BPM.DevelopmentHelp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenQGuru.GAIA.BPM.FormFoundation\BenQGuru.GAIA.BPM.FormFoundation.csproj">
+      <Project>{DF6CA210-637B-42C6-BF15-ADFFB222F5EA}</Project>
+      <Name>BenQGuru.GAIA.BPM.FormFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenQGuru.GAIA.BPM.FormMaker\BenQGuru.GAIA.BPM.FormMaker.csproj">
+      <Project>{534E1F04-3674-41AC-9B59-09D4E8D2159E}</Project>
+      <Name>BenQGuru.GAIA.BPM.FormMaker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenQGuru.GAIA.BPM.Web\BenQGuru.GAIA.BPM.Web.csproj">
+      <Project>{B3F32EAC-CA4A-40BB-A90C-2CF18ADE35C1}</Project>
+      <Name>BenQGuru.GAIA.BPM.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Agent\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="routes.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormDescription\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\PhaseReturn\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormConfig\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\ApproveModel\GrantedAmount\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormType\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\ApproveModel\RoleType\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\RoleType\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\RoleType\Modify.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\Role\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\Role\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\Role\Modify.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\ApproveModel\FinClass\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\GrantedApprover\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\FinTable\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\FinTable\List.cshtml" />
+    <Content Include="Views\BPM\Admin\ApproveModel\FinTable\Modify.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="unity.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logging.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\ApproveModel\GrantedEmployeeLevel\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\Employee\PopupPicker.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\BPM\bg.bpm.picker.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\Org\PopupPicker.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormFunction\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormList\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\_ViewStart.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\PersonLevel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\Dept.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\DeptLevel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\DataSource.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\Amount.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\WebService.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BPM\Admin\FormDefine\FormPhase\List.cshtml" />
+    <Content Include="Scripts\BPM\Admin\FormDefine\Participant\bg.bpm.dept.js" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormDealer\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormList\PopupPicker.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormField\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormDescription\HelpLink.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormAction\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\CodeList\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormConfigSP\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormProperty\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormMaintain\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\ApplyPermission\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormProperty\Modify.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormProperty\_InputPartail.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormPhase\_subTabLine.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflowMapping\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflowMapping\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflowMapping\Modify.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflow\Add.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflow\Setting.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormSubflow\Modify.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormLayout\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormLayout\Modify.cshtml" />
+    <None Include="Views\BPM\Admin\FormDefine\Participant\Role.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\PhaseAdvance\Setting.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\PhaseCondition\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\Participant\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\BPM\Admin\FormDefine\_LayoutBPMFlowDefine.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Admin\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Admin\_LayoutBPMAdmin.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\SameApprover\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormNoticeConfig\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\PhaseRule\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDefine\FormNoticeConfig\Modify.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\DesignType\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\CommonElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\UpLoadElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\ExternalDataSource\DBDataSource.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\TextboxElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\SumTextBoxElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\LinkElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\DataSource\_InputPartail.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\SeparatorElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\EmployeePicker\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\LabelElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\TableElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\GeneralPickerElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\CheckboxListElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\RadioButtonElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\RelatedFormElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\ComputeTextBoxElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\LongTextboxElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\ExternalDataSource\WSDataSource.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormTable\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\_ViewStart.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\PageLogic\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\SqlSetting\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\PageField\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\DropdownListElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\CalendarElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\Elements\RadioButtonElement\List.cshtml" />
+    <Content Include="Views\BPM\Admin\FormDesign\FormTable\ModifyInline.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\BPM\Admin\FormDefine\FlowDiagram\" />
+    <Folder Include="XSL\Template\Elements\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>28553</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
